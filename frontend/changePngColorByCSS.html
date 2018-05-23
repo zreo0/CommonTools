@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.icon {
+		    display: inline-block;
+		    width: 40px; 
+		    height: 40px;
+		    overflow: hidden;
+		}
+		.icon-del {
+			width: 40px;
+			height: 40px;
+		    background: url('9.png') no-repeat center;
+		    background-size:100% 100%;
+		}
+		.icon > .icon {
+		    transform:translateX(-100%);
+		    -webkit-filter: drop-shadow(40px 0 #666);
+		    filter: drop-shadow(40px 0 #666);    
+		}
+
+		.changeColorIcon {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background: url('9.png') no-repeat center;
+			background-size:100% 100%;
+			overflow: hidden;
+			/*&:after {
+				content: '';
+				display: block;
+				height: 100%;
+				transform: translateX(-100%);
+				background: inherit;
+				filter: drop-shadow(40px 0 0 red);
+			}*/
+			
+		}
+		
+		.changeColorIcon:after {
+			content: '';
+			display: block;
+			height: 100%;
+			transform: translateX(-100%);
+			background: inherit;
+			filter: drop-shadow(40px 0 0 red);
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+		
+	</script>
+	<div>
+		<i class="icon icon-del"></i>
+		<br>
+		<i class="icon"><i class="icon icon-del"></i></i>
+		<br>
+		<i class="changeColorIcon"></i>
+	</div>
+</body>
+</html>
